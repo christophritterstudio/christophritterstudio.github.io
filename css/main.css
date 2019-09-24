@@ -1,0 +1,244 @@
+/* Webfont: OpticianSans-Regular */@font-face {
+    font-family: 'OpticianSans';
+    src: url('../resources/fonts/Optiker-K.woff2') format('woff2'), /* Modern Browsers */
+         url('../resources/fonts/Optiker-K.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+html {
+  overflow: hidden;
+}
+
+body {
+  background-color:#211942;
+  font-family: 'OpticianSans', sans-serif;
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #D4D4D4;
+}
+
+.step {
+  width: 413px;
+  height: 57px;
+  border: 4px solid white;
+  border-width: 0px 4px 4px 4px;
+  position: relative;
+  text-align: center;
+}
+
+.step:last-child {
+  border-width: 0px 4px 0px 4px;
+}
+
+.logo-wrap {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: ladder-up 6s cubic-bezier(0.550, 0.085, 0.680, 0.530) infinite;
+}
+
+.text-lg {
+  font-size: 32.6px;
+  padding-top: 3px;
+}
+
+.text-sm {
+  font-size: 29px;
+  padding-top: 15px;
+}
+
+.bottom {
+  padding-top: 0px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom span {
+  margin-top: 20px;
+}
+
+.overlay {
+  position: fixed;
+  top: calc(25% + 281px);
+  width: 100%;
+  bottom: 0;
+  background-color: #211942;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.overlay-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 25%;
+  background-color: #211942;
+  z-index: 2;
+}
+
+#mc_embed_signup {
+  background-color: transparent !important;
+  font: inherit !important;
+}
+
+#mc_embed_signup input.email {
+  font-family: inherit !important;
+}
+
+#subscription-form {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.btn-primary {
+  border-radius: 0;
+  background-color: #262626;
+  border-color: #262626;
+}
+
+.btn-primary:hover {
+  background-color: #383838;
+  border-color: #383838;
+}
+
+input {
+  border-radius: 0px;
+  border: none;
+  padding: 5px 10px;
+  background-color: #e6e6e6;
+}
+
+@keyframes ladder-up {
+  0% {
+    top: calc(-741px + 25% + 285px);
+  } 12.5% {
+    top: calc(-741px + 25% + 285px);
+  } 50% {
+    top: 25%;
+  } 62.5% {
+    top: 25%;
+  } 100% {
+    top: calc(-741px + 25% + 285px);
+  }
+}
+
+@keyframes ladder-up-2 {
+  0% {
+    top: calc(-1482px + 10% + 570px);
+  } 12.5% {
+    top: calc(-1482px + 10% + 570px);
+  } 50% {
+    top: 10%;
+  } 62.5% {
+    top: 10%;
+  } 100% {
+    top: calc(-1482px + 10% + 570px);
+  }
+}
+
+@keyframes ladder-up-3 {
+  0% {
+    top: calc(-555.75px + 25% + 204.75px);
+  } 12.5% {
+    top: calc(-555.75px + 25% + 204.75px);
+  } 50% {
+    top: 25%;
+  } 62.5% {
+    top: 25%;
+  } 100% {
+    top: calc(-555.75px + 25% + 204.75px);
+  }
+}
+
+@media (max-width: 576px) {
+  input {
+    width: 210px;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  .step {
+    width: 309.75px;
+    height: 42.75px;
+  }
+
+  .text-sm {
+    font-size: 21.75px;
+    padding-top: 10px;
+  }
+
+  .text-lg {
+    font-size: 24.45px;
+  }
+  .overlay {
+    top: calc(25% + 206.75px);
+  }
+
+  .logo-wrap {
+    animation-name: ladder-up-3;
+  }
+  .overlay-top {
+    height: calc(25% + 2px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .overlay-top {
+    height: 10%;
+  }
+  .step {
+    width: 826px;
+    height: 114px;
+    border-width: 0px 8px 8px 8px;
+  }
+
+  .text-lg {
+    font-size: 65.2px;
+  }
+
+  .text-sm {
+    font-size: 58px;
+  }
+
+  .step:last-child {
+    border-width: 0px 8px 0px 8px;
+  }
+
+  .overlay {
+    top: calc(10% + 560px);
+  }
+
+  .logo-wrap {
+    animation-name: ladder-up-2;
+  }
+}
