@@ -48,8 +48,6 @@ a:hover {
   top: 200px;
   left: 50%;
   transform: translateX(-50%);
-  /*clip-path: inset(0px 0px 916px 0px);*/
-  /*animation: ladder-up 6s cubic-bezier(0.550, 0.085, 0.680, 0.530) infinite;*/
   animation: ladder-up 5s cubic-bezier(0.215, 0.610, 0.420, 0.855) infinite;
 }
 
@@ -62,6 +60,29 @@ a:hover {
   -webkit-clip-path: inset(200px 0px calc(100vh - 481px) 0px);
   clip-path: inset(200px 0px calc(100vh - 481px) 0px);
   height: 100vh;
+  display: none;
+}
+
+.img-no-support {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.img-no-support img {
+  width: 550px;
+}
+
+@supports(-webkit-clip-path: inset(200px 0px 200px 0px)) or (clip-path: inset(200px 0px 200px 0px)) {
+  .logo-outer {
+    display: block;
+  }
+
+  .img-no-support {
+    display: none;
+  }
+
 }
 
 .text-lg {
@@ -227,6 +248,9 @@ input {
 }
 
 @media (max-width: 576px) {
+  .img-no-support img {
+    width: 300px;
+  }
   input {
     width: 210px;
   }
@@ -267,6 +291,10 @@ input {
 }
 
 @media (min-width: 1200px) {
+  .img-no-support img {
+    width: 800px;
+  }
+
   .overlay-top {
     height: 10%;
   }
