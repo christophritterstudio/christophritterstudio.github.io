@@ -11,39 +11,56 @@ html {
 }
 
 body {
-  background-color:#211942;
+  background-image: url('../resources/img/Pattern_WEB_3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
   font-family: 'OpticianSans', sans-serif;
-  color: white;
+  color: black;
 }
 
 a {
-  color: white;
+  color: black;
 }
 
 a:hover {
   text-decoration: none;
-  color: #D4D4D4;
+  color: #363636;
 }
 
 .step {
   width: 413px;
   height: 57px;
-  border: 4px solid white;
+  border: 4px solid black;
   border-width: 0px 4px 4px 4px;
   position: relative;
   text-align: center;
 }
 
-.step:last-child {
-  border-width: 0px 4px 0px 4px;
+.row{
+  width: 100%;
+  align-items: center;
 }
 
+
 .logo-wrap {
-  position: absolute;
-  top: 25%;
+  position: relative;
+  top: 200px;
   left: 50%;
   transform: translateX(-50%);
-  animation: ladder-up 6s cubic-bezier(0.550, 0.085, 0.680, 0.530) infinite;
+  /*clip-path: inset(0px 0px 916px 0px);*/
+  /*animation: ladder-up 6s cubic-bezier(0.550, 0.085, 0.680, 0.530) infinite;*/
+  animation: ladder-up 5s cubic-bezier(0.215, 0.610, 0.420, 0.855) infinite;
+}
+
+.logo-outer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25%;
+  top: 0%;
+  clip-path: inset(200px 0px calc(100vh - 481px) 0px);
+  height: 100vh;
 }
 
 .text-lg {
@@ -73,12 +90,11 @@ a:hover {
   top: calc(25% + 281px);
   width: 100%;
   bottom: 0;
-  background-color: #211942;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .form-wrapper {
@@ -99,7 +115,6 @@ a:hover {
   top: 0;
   width: 100%;
   height: 25%;
-  background-color: #211942;
   z-index: 2;
 }
 
@@ -120,61 +135,93 @@ a:hover {
 
 .btn-primary {
   border-radius: 0;
-  background-color: #262626;
-  border-color: #262626;
+  background-color: black;
+  border-color: black;
 }
 
 .btn-primary:hover {
-  background-color: #383838;
-  border-color: #383838;
+  background-color: white;
+  border-color: white;
+  color: black;
 }
 
 input {
+  background-color: #262626;
+  color: white;
   border-radius: 0px;
   border: none;
   padding: 5px 10px;
-  background-color: #e6e6e6;
 }
 
 @keyframes ladder-up {
   0% {
-    top: calc(-741px + 25% + 285px);
-  } 12.5% {
-    top: calc(-741px + 25% + 285px);
-  } 50% {
-    top: 25%;
-  } 62.5% {
-    top: 25%;
-  } 100% {
-    top: calc(-741px + 25% + 285px);
+    top: 200px;
+  }
+  4% {
+    top: 250px;
+  }
+  45% {
+    top: calc(200px - 456px);
+  }
+  50% {
+    top: calc(200px - 456px);
+  }
+  54% {
+    top: calc(200px - 416px);
+  }
+  95% {
+    top: calc(200px - 912px);
+  }
+  100% {
+    top: calc(200px - 912px);
   }
 }
 
 @keyframes ladder-up-2 {
   0% {
-    top: calc(-1482px + 10% + 570px);
-  } 12.5% {
-    top: calc(-1482px + 10% + 570px);
-  } 50% {
-    top: 10%;
-  } 62.5% {
-    top: 10%;
-  } 100% {
-    top: calc(-1482px + 10% + 570px);
+    top: 100px;
+  }
+  4% {
+    top: 150px;
+  }
+  45% {
+    top: calc(100px - 912px);
+  }
+  50% {
+    top: calc(100px - 912px);
+  }
+  54% {
+    top: calc(100px - 862px);
+  }
+  95% {
+    top: calc(100px - 1824px);
+  }
+  100% {
+    top: calc(100px - 1824px);
   }
 }
 
 @keyframes ladder-up-3 {
   0% {
-    top: calc(-555.75px + 25% + 204.75px);
-  } 12.5% {
-    top: calc(-555.75px + 25% + 204.75px);
-  } 50% {
-    top: 25%;
-  } 62.5% {
-    top: 25%;
-  } 100% {
-    top: calc(-555.75px + 25% + 204.75px);
+    top: 50px;
+  }
+  4% {
+    top: 100px;
+  }
+  45% {
+    top: calc(50px - 352px);
+  }
+  50% {
+    top: calc(50px - 352px);
+  }
+  54% {
+    top: calc(50px - 302px);
+  }
+  95% {
+    top: calc(50px - 696px);
+  }
+  100% {
+    top: calc(50px - 696px);
   }
 }
 
@@ -201,11 +248,17 @@ input {
     font-size: 24.45px;
   }
   .overlay {
-    top: calc(25% + 206.75px);
+    top: calc(10% + 206.75px);
   }
 
   .logo-wrap {
+    top: 50px;
+    /*clip-path: inset(0px 0px 712px 0px);*/
     animation-name: ladder-up-3;
+  }
+
+  .logo-outer {
+    clip-path: inset(51px 0px calc(100vh - 261.75px) 0px);
   }
   .overlay-top {
     height: calc(25% + 2px);
@@ -230,15 +283,17 @@ input {
     font-size: 58px;
   }
 
-  .step:last-child {
-    border-width: 0px 8px 0px 8px;
-  }
-
   .overlay {
     top: calc(10% + 560px);
   }
 
+  .logo-outer {
+    clip-path: inset(100px 0px calc(100vh - 662px) 0px);
+  }
+
   .logo-wrap {
+    top: 100px;
+    /*clip-path: inset(0px 0px 1834px 0px);*/
     animation-name: ladder-up-2;
   }
 }
