@@ -60,6 +60,7 @@ a:hover {
   top: 25%;
   top: 0%;
   clip-path: inset(200px 0px calc(100vh - 481px) 0px);
+  -webkit-clip-path: inset(200px 0px calc(100vh - 481px) 0px);
   height: 100vh;
 }
 
@@ -253,12 +254,12 @@ input {
 
   .logo-wrap {
     top: 50px;
-    /*clip-path: inset(0px 0px 712px 0px);*/
     animation-name: ladder-up-3;
   }
 
   .logo-outer {
     clip-path: inset(51px 0px calc(100vh - 261.75px) 0px);
+    -webkit-clip-path: inset(51px 0px calc(100vh - 261.75px) 0px);
   }
   .overlay-top {
     height: calc(25% + 2px);
@@ -289,11 +290,11 @@ input {
 
   .logo-outer {
     clip-path: inset(100px 0px calc(100vh - 662px) 0px);
+    -webkit-clip-path: inset(100px 0px calc(100vh - 662px) 0px);
   }
 
   .logo-wrap {
     top: 100px;
-    /*clip-path: inset(0px 0px 1834px 0px);*/
     animation-name: ladder-up-2;
   }
 }
