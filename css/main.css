@@ -247,6 +247,41 @@ input {
   }
 }
 
+@keyframes ladder-up-4 {
+  0% {
+    top: 50px;
+  }
+  4% {
+    top: 100px;
+  }
+  45% {
+    top: calc(50px - 352px);
+  }
+  50% {
+    top: calc(50px - 352px);
+  }
+  54% {
+    top: calc(50px - 302px);
+  }
+  95% {
+    top: calc(50px - 696px);
+  }
+  100% {
+    top: calc(50px - 696px);
+  }
+}
+
+@media (max-width: 320px) {
+  .logo-wrap {
+    top: 50px;
+    animation-name: ladder-up-4;
+  }
+  .logo-outer {
+    -webkit-clip-path: inset(50px 0px calc(100vh - 270.75px) 0px);
+    clip-path: inset(50px 0px calc(100vh - 270.75px) 0px);
+  }
+}
+
 @media (max-width: 576px) {
   .img-no-support img {
     width: 300px;
@@ -276,6 +311,13 @@ input {
     top: auto;
   }
 
+
+  .overlay-top {
+    height: calc(25% + 2px);
+  }
+}
+
+@media (min-width:321px) and (max-width: 576px) {
   .logo-wrap {
     top: 200px;
     animation-name: ladder-up-3;
@@ -284,9 +326,6 @@ input {
   .logo-outer {
     -webkit-clip-path: inset(201px 0px calc(100vh - 420.75px) 0px);
     clip-path: inset(201px 0px calc(100vh - 420.75px) 0px);
-  }
-  .overlay-top {
-    height: calc(25% + 2px);
   }
 }
 
