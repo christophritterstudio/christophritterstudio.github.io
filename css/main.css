@@ -225,25 +225,25 @@ input {
 
 @keyframes ladder-up-3 {
   0% {
-    top: 50px;
+    top: 200px;
   }
   4% {
-    top: 100px;
+    top: 250px;
   }
   45% {
-    top: calc(50px - 352px);
+    top: calc(200px - 352px);
   }
   50% {
-    top: calc(50px - 352px);
+    top: calc(200px - 352px);
   }
   54% {
-    top: calc(50px - 302px);
+    top: calc(200px - 302px);
   }
   95% {
-    top: calc(50px - 696px);
+    top: calc(200px - 696px);
   }
   100% {
-    top: calc(50px - 696px);
+    top: calc(200px - 696px);
   }
 }
 
@@ -273,17 +273,17 @@ input {
     font-size: 24.45px;
   }
   .overlay {
-    top: calc(10% + 206.75px);
+    top: auto;
   }
 
   .logo-wrap {
-    top: 50px;
+    top: 200px;
     animation-name: ladder-up-3;
   }
 
   .logo-outer {
-    -webkit-clip-path: inset(51px 0px calc(100vh - 261.75px) 0px);
-    clip-path: inset(51px 0px calc(100vh - 261.75px) 0px);
+    -webkit-clip-path: inset(201px 0px calc(100vh - 420.75px) 0px);
+    clip-path: inset(201px 0px calc(100vh - 420.75px) 0px);
   }
   .overlay-top {
     height: calc(25% + 2px);
@@ -291,6 +291,10 @@ input {
 }
 
 @media (min-width: 1200px) {
+  body {
+    background-image: url('../resources/img/Pattern_WEB_DESKTOP.jpg');
+  }
+
   .img-no-support img {
     width: 800px;
   }
